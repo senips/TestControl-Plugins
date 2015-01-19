@@ -1,0 +1,6 @@
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\bin\Release\TestControl.Help.Plugin.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\bin\Release\TestControl.Help.Plugin.pdb
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\bin\Release\TestControl.Net.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\obj\Release\TestControl.Help.Plugin.csprojResolveAssemblyReference.cache
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\obj\Release\TestControl.Help.Plugin.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\obj\Release\TestControl.Help.Plugin.pdb

@@ -1,0 +1,9 @@
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Example.Fixture\bin\Debug\TestControl.Example.Fixture.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Example.Fixture\bin\Debug\TestControl.Example.Fixture.pdb
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Example.Fixture\obj\Debug\TestControl.Example.Fixture.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Example.Fixture\obj\Debug\TestControl.Example.Fixture.pdb
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Example.Fixture\bin\Debug\TestControl.Net.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Example.Fixture.dll
+C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Example.Fixture.pdb
+C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Example.Fixture.XML
+C:\Users\senips\Source\TestControl-Plugins\TestControl.net\CalcExe\calc.exe

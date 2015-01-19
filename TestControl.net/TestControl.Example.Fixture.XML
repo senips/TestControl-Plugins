@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestControl.Example.Fixture</name>
+    </assembly>
+    <members>
+        <member name="T:TestControl.Example.Fixture.CalculatorFixture">
+             <summary>
+             Calc.Exe is from XP edition. 
+             Fixture for automating calculator
+            
+             </summary>
+             <automation-caption>Calculator</automation-caption>
+        </member>
+        <member name="M:TestControl.Example.Fixture.CalculatorFixture.EnterValue(System.String)">
+            <summary>
+             Enter a number into the calculator
+            </summary>        
+            <automation-name>0, 1, 2, 3,4 5,6,7,8,9</automation-name>
+            <param name="aNumber"></param>
+        </member>
+        <member name="M:TestControl.Example.Fixture.CalculatorFixture.Operation(System.String)">
+            <summary>
+            select the operation to be performed on the calculator
+            </summary>
+            <remarks> </remarks>
+            <automation-name>+,-,*,/</automation-name>
+            <param name="opr"></param>
+        </member>
+        <member name="P:TestControl.Example.Fixture.CalculatorFixture.Result">
+            <summary>
+            get the result value from the calculator        
+            </summary>
+            <automation-id>403</automation-id>
+        </member>
+        <member name="T:TestControl.Example.Fixture.AFixture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TestControl.Example.Fixture.FolderFixture">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
