@@ -52,6 +52,12 @@ namespace TestControl.Example.Fixture
         /// </summary>        
         /// <automation-name>0, 1, 2, 3,4 5,6,7,8,9</automation-name>
         /// <param name="aNumber"></param>
+        /// <example>
+        /// 
+        ///  <code>
+        ///     if s>sdf then
+        ///  </code>
+        /// </example>
         public void EnterValue(String aNumber)
         {
             foreach (char ch in aNumber)

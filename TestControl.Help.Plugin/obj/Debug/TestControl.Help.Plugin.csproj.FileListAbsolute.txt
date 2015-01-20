@@ -20,3 +20,4 @@ C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\obj\Debug\Tes
 C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\obj\Debug\TestControl.Help.Plugin.csproj.GenerateResource.Cache
 C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Help.Plugin.XML
 C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Help.Plugin.dll.config
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Help.Plugin\obj\Debug\TestControl.Help.Plugin.csprojResolveAssemblyReference.cache

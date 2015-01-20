@@ -69,7 +69,7 @@ namespace TestControl.Help.Plugin
         public String AutomationId { get; set; }
         public String AutomationName { get; set; }
         public String WindowClassName { get; set; }
-
+        public String CodeSnippet { get; set; }
 
 
         public String PackageName

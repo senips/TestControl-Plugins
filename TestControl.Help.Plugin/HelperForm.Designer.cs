@@ -95,7 +95,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(704, 305);
-            this.splitContainer1.SplitterDistance = 233;
+            this.splitContainer1.SplitterDistance = 232;
             this.splitContainer1.TabIndex = 9;
             // 
             // splitContainer3
@@ -114,7 +114,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.splitContainer3.Size = new System.Drawing.Size(225, 297);
+            this.splitContainer3.Size = new System.Drawing.Size(224, 297);
             this.splitContainer3.SplitterDistance = 268;
             this.splitContainer3.TabIndex = 5;
             // 
@@ -127,8 +127,9 @@
             this.methodList.ItemHeight = 17;
             this.methodList.Location = new System.Drawing.Point(3, 20);
             this.methodList.Name = "methodList";
-            this.methodList.Size = new System.Drawing.Size(219, 245);
+            this.methodList.Size = new System.Drawing.Size(218, 245);
             this.methodList.TabIndex = 4;
+            this.methodList.SelectedIndexChanged += new System.EventHandler(this.methodList_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -160,7 +161,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.codeSnippet);
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.splitContainer2.Size = new System.Drawing.Size(467, 305);
+            this.splitContainer2.Size = new System.Drawing.Size(468, 305);
             this.splitContainer2.SplitterDistance = 86;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -169,7 +170,7 @@
             this.helpDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.helpDisplay.Location = new System.Drawing.Point(3, 20);
             this.helpDisplay.Name = "helpDisplay";
-            this.helpDisplay.Size = new System.Drawing.Size(459, 61);
+            this.helpDisplay.Size = new System.Drawing.Size(460, 61);
             this.helpDisplay.TabIndex = 0;
             this.helpDisplay.Text = "";
             // 
@@ -190,7 +191,7 @@
             this.codeSnippet.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codeSnippet.Location = new System.Drawing.Point(3, 20);
             this.codeSnippet.Name = "codeSnippet";
-            this.codeSnippet.Size = new System.Drawing.Size(459, 190);
+            this.codeSnippet.Size = new System.Drawing.Size(460, 190);
             this.codeSnippet.TabIndex = 0;
             this.codeSnippet.Text = "";
             this.codeSnippet.WordWrap = false;
@@ -202,9 +203,9 @@
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Code snippet";
+            this.label2.Text = "Code tips:";
             // 
             // panel1
             // 

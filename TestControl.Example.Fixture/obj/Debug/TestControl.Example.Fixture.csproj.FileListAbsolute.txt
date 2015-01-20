@@ -7,3 +7,4 @@ C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Example.F
 C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Example.Fixture.pdb
 C:\Users\senips\Source\TestControl-Plugins\TestControl.net\TestControl.Example.Fixture.XML
 C:\Users\senips\Source\TestControl-Plugins\TestControl.net\CalcExe\calc.exe
+C:\Users\senips\Source\TestControl-Plugins\TestControl.Example.Fixture\obj\Debug\TestControl.Example.Fixture.csprojResolveAssemblyReference.cache

@@ -13,22 +13,15 @@ namespace TestControl.Help.Plugin
     public class AutomationCodeHelper : IAutomationCodeHelper
     {
         private readonly IList<BaseHelperItem> _codeHelperItems = new List<BaseHelperItem>();
-        private XDocument _xDoc;
         private bool _loaded;
 
-        private XDocument HelpDoc
+        private static XDocument GetHelpDoc(string helpXml)
         {
-            get
+            if (File.Exists(helpXml))
             {
-                if (_xDoc == null)
-                {
-                    if (File.Exists(HelpXmlFile))
-                    {
-                        _xDoc = XDocument.Load(HelpXmlFile);
-                    }
-                }
-                return _xDoc;
+                return XDocument.Load(helpXml);
             }
+            return null;
         }
 
         public BaseHelperItem FindClass(ControlProperties controlProperties)
@@ -38,7 +31,7 @@ namespace TestControl.Help.Plugin
 
         public BaseHelperItem FindMember(ControlProperties controlProperties)
         {
-            var helpeItems = _codeHelperItems.Where(x => ((x.MemberType == "M") || (x.MemberType == "P")) ).ToList();
+            var helpeItems = _codeHelperItems.Where(x => ((x.MemberType == "M") || (x.MemberType == "P"))).ToList();
             return FindClassInternal(helpeItems, controlProperties);
         }
 
@@ -71,25 +64,29 @@ namespace TestControl.Help.Plugin
                 return;
             }
             _loaded = true;
-            BaseHelperItem parentItem = null;
-            foreach (var item in HelpDoc.Descendants("member"))
+            foreach (KeyValueConfigurationElement helpFileItem in GetConfig().AppSettings.Settings)
             {
-                var helperItem = new BaseHelperItem();
-                helperItem.MemberName = item.Attribute("name").Value;
-                helperItem.Summary = GetElementValue(item.Element("summary"));
-                helperItem.AutomationCaption = GetElementValue(item.Element("automation-caption"));
-                helperItem.AutomationId = GetElementValue(item.Element("automation-id"));
-                helperItem.WindowClassName = GetElementValue(item.Element("automation-class"));
-                helperItem.AutomationName = GetElementValue(item.Element("automation-name"));
-                if (helperItem.MemberType == "T")
+                var helpDoc = GetHelpDoc(helpFileItem.Value);
+                BaseHelperItem parentItem = null;
+                foreach (var item in helpDoc.Descendants("member"))
                 {
-                    parentItem = helperItem;
+                    var helperItem = new BaseHelperItem();
+                    helperItem.MemberName = item.Attribute("name").Value;
+                    helperItem.Summary = GetElementValue(item.Element("summary"));
+                    helperItem.AutomationCaption = GetElementValue(item.Element("automation-caption"));
+                    helperItem.AutomationId = GetElementValue(item.Element("automation-id"));
+                    helperItem.WindowClassName = GetElementValue(item.Element("automation-class"));
+                    helperItem.AutomationName = GetElementValue(item.Element("automation-name"));
+                    if (helperItem.MemberType == "T")
+                    {
+                        parentItem = helperItem;
+                    }
+                    else
+                    {
+                        helperItem.Parent = parentItem;
+                    }
+                    _codeHelperItems.Add(helperItem);
                 }
-                else
-                {
-                    helperItem.Parent = parentItem;
-                }
-                _codeHelperItems.Add(helperItem);
             }
         }
 
@@ -116,11 +113,6 @@ namespace TestControl.Help.Plugin
         private string ConfigFile
         {
             get { return "TestControl.Help.Plugin.dll"; }
-        }
-
-        private string HelpXmlFile
-        {
-            get { return "TestControl.Example.Fixture.xml"; }
         }
 
 

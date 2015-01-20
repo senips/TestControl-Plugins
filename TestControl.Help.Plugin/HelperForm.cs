@@ -82,6 +82,17 @@ namespace TestControl.Help.Plugin
             Hide();
         }
 
+        private void methodList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            helpDisplay.Text = "";
+            if (methodList.SelectedItem != null)
+            {
+                var helperItem = ((BaseHelperItem)methodList.SelectedItem);
+                helpDisplay.Text = helperItem.Summary;
+                codeSnippet.Text = helperItem.CodeSnippet;
+            }
+        }
+
       
 
     }
